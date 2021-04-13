@@ -12,7 +12,11 @@ export default class JamStackComponent {
     const { ProjectName } = inputs.Project || inputs.props;
     const { cwd } = process;
     this.logger.debug(`[${ProjectName}] inputs params: ${JSON.stringify(inputs, null, 2)}`);
-    await deploy(cwd(), inputs);
+    try {
+      await deploy(cwd(), inputs);
+    } catch (error) {
+      console.log(error);
+    }
     this.logger.info('部署完成');
   }
   async dev(inputs: any) {

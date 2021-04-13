@@ -1,7 +1,7 @@
 edition: 1.0.0
 services:
   midway-app:
-    component: /Users/yk/heimanba/aliFE/jmstack-proj/devs-mw-component/lib/index.js
+    component: /Users/yk/heimanba/aliFE/devsapp/midway-hooks/lib/index.js
     access: simple_mvc
     provider: default
     props:
@@ -10,6 +10,7 @@ services:
       provider:
         name: aliyun
         runtime: nodejs12
+        region: cn-hangzhou
       aggregation:
         fass-dankun:
           functionsPattern:
