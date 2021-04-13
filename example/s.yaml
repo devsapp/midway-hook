@@ -1,0 +1,20 @@
+edition: 1.0.0
+services:
+  midway-app:
+    component: /Users/yk/heimanba/aliFE/jmstack-proj/devs-mw-component/lib/index.js
+    access: simple_mvc
+    provider: default
+    props:
+      service:
+        name: dankun-midway-app
+      provider:
+        name: aliyun
+        runtime: nodejs12
+      aggregation:
+        fass-dankun:
+          functionsPattern:
+            - '*'
+      package:
+        include:
+          - build
+

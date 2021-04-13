@@ -1,0 +1,52 @@
+{
+  "name": "jamstack",
+  "version": "0.0.1",
+  "main": "./lib/index",
+  "dependencies": {
+    "@midwayjs/cli": "^1.2.55",
+    "@midwayjs/faas": "^2.8.6",
+    "@midwayjs/fcli-plugin-deploy": "^1.2.54",
+    "@midwayjs/fcli-plugin-fc": "^1.2.61",
+    "@midwayjs/fcli-plugin-package": "^1.2.61",
+    "@midwayjs/hooks": "^2.0.0",
+    "@serverless-devs/core": "^0.0.40",
+    "@types/express": "^4.17.11",
+    "fs-extra": "^9.1.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.2.6",
+    "@types/fs-extra": "^9.0.8",
+    "@types/jest": "^26.0.10",
+    "@types/node": "14",
+    "f2elint": "^0.4.4",
+    "jest": "^26.4.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.2.0",
+    "ts-loader": "^8.0.14",
+    "ts-node": "^9.1.1",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "dev": "npx tsc -w -p tsconfig.json",
+    "prebuild": "rimraf dist",
+    "build": "npx tsc -p tsconfig.json",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "lint": "f2elint scan",
+    "fix": "f2elint fix",
+    "typecheck": "npx tsc -p tsconfig.json --noEmit"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "f2elint exec commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "f2elint exec lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts}": "f2elint exec eslint"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}
