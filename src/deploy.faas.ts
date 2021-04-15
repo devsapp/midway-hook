@@ -17,7 +17,7 @@ const deployFaas = async (baseDir: string, inputs) => {
     options: {
       skipZip: true,
       serverlessDev: {
-        access: get(inputs, 'credentials.Alias'),
+        access: get(inputs, 'credentials.Alias') || 'default',
       },
     },
   });
