@@ -1,6 +1,5 @@
 edition: 1.0.0
 
-
 services:
   midway-app:
     component: /Users/yk/heimanba/aliFE/devsapp/midway-hooks/lib/index.js
