@@ -1,5 +1,6 @@
 'use strict';
 import { CommandCore } from '@midwayjs/command-core';
+import get from 'lodash.get';
 // import { loadSpec } from '@midwayjs/serverless-spec-builder';
 import { PackagePlugin } from '@midwayjs/fcli-plugin-package';
 import { AliyunFCPlugin } from '@midwayjs/fcli-plugin-fc';
@@ -12,12 +13,11 @@ const deployFaas = async (baseDir: string, inputs) => {
     },
     commands: ['deploy'],
     service: inputs.props,
-    provider: 'aliyun',
     log: console,
     options: {
       skipZip: true,
       serverlessDev: {
-        access: 'default',
+        access: get(inputs, 'credentials.Alias'),
       },
     },
   });
