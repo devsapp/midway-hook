@@ -6,5 +6,5 @@ export default class JamStackComponent {
      * @param inputs
      */
     deploy(inputs: any): Promise<void>;
-    dev(inputs: any): Promise<void>;
+    remove(inputs: any): Promise<void>;
 }

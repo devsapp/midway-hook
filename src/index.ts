@@ -12,14 +12,9 @@ export default class JamStackComponent {
     const { ProjectName } = inputs.Project || inputs.props;
     const { cwd } = process;
     this.logger.debug(`[${ProjectName}] inputs params: ${JSON.stringify(inputs, null, 2)}`);
-    try {
-      await deploy(cwd(), inputs);
-    } catch (error) {
-      console.log(error);
-    }
-    this.logger.info('部署完成');
+    await deploy(cwd(), inputs);
   }
-  async dev(inputs: any) {
+  async remove(inputs: any) {
     const { ProjectName } = inputs.Project;
     this.logger.debug(`[${ProjectName}] inputs params: ${JSON.stringify(inputs, null, 2)}`);
     const { faasConfig } = inputs.Properties || inputs.props;
