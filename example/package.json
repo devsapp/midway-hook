@@ -13,8 +13,6 @@
   },
   "dependencies": {
     "@midwayjs/faas": "^2.8.6",
-    "@midwayjs/fcli-plugin-fc": "^1.2.61",
-    "@midwayjs/fcli-plugin-package": "^1.2.61",
     "@midwayjs/hooks": "^2.0.0",
     "@serverless-devs/core": "^0.0.60",
     "react": "^17.0.0",

@@ -2,7 +2,6 @@
 /dist
 /node_modules
 /example/node_modules
-/lib
 
 # Logs
 logs
