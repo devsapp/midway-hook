@@ -14,11 +14,4 @@ export default class JamStackComponent {
     this.logger.debug(`[${ProjectName}] inputs params: ${JSON.stringify(inputs, null, 2)}`);
     await deploy(cwd(), inputs);
   }
-  async remove(inputs: any) {
-    const { ProjectName } = inputs.Project;
-    this.logger.debug(`[${ProjectName}] inputs params: ${JSON.stringify(inputs, null, 2)}`);
-    const { faasConfig } = inputs.Properties || inputs.props;
-    console.log(faasConfig);
-    // faasConfig => midway.config.js
-  }
 }
