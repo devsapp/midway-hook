@@ -1,6 +1,5 @@
 import { HLogger, ILogger } from '@serverless-devs/core';
-import deploy from './deploy.faas';
-// import build from './build.faas';
+import deploy from './service/faas.deploy';
 
 export default class JamStackComponent {
   @HLogger('MIDWAY_FAAS') logger: ILogger;
