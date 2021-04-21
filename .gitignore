@@ -40,3 +40,4 @@ dist-ssr
 build
 .s/
 .serverless/
+package-lock.json

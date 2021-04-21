@@ -5,5 +5,5 @@ export default class JamStackComponent {
      * 部署应用
      * @param inputs
      */
-    deploy(inputs: any): Promise<void>;
+    deploy(inputs: any): any;
 }

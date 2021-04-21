@@ -1,2 +1,2 @@
-declare const buildFaas: (cwd: string) => Promise<void>;
+declare const buildFaas: (cwd: string) => any;
 export default buildFaas;

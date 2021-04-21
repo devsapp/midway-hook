@@ -9,8 +9,9 @@
     "@midwayjs/fcli-plugin-fc": "^1.2.64-beta.1",
     "@midwayjs/fcli-plugin-package": "^1.2.63-beta.3",
     "@midwayjs/hooks": "^2.0.0",
-    "@serverless-devs/core": "^0.0.70",
+    "@serverless-devs/core": "^0.0.*",
     "fs-extra": "^9.1.0",
+    "latest": "^0.2.0",
     "lodash.get": "^4.4.2"
   },
   "devDependencies": {
