@@ -3,7 +3,7 @@
 通过该应用，您可以简单快速的创建一个midway-hook框架到阿里云函数计算服务。
 
 - 下载命令行工具：`npm install -g @serverless-devs/s`
-- 初始化一个模版项目：`s init devsapp/midway-hook-example/midway-hook-react`
+- 初始化一个模版项目：`s init devsapp/midway-hook-example:midway-hook-react`
 - 进入项目后部署项目：`s deploy`
 - 部署过程中可能需要阿里云密钥的支持，部署完成之后会获得到临时域名可供测试
 
@@ -36,8 +36,8 @@ props配置详细介绍参考 [midway-hook f.yml配置](https://www.yuque.com/mi
 
 ## 模板应用
 目前支持模板应用包括
-- react模板: `s init devsapp/midway-hook-example/midway-hook-react`
-- vue模板 `s init devsapp/midway-hook-example/midway-hook-vue`
+- react模板: `s init devsapp/midway-hook-example:midway-hook-react`
+- vue模板 `s init devsapp/midway-hook-example:midway-hook-vue`
 
 
 -----
