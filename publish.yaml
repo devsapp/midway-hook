@@ -2,7 +2,7 @@ Type: Component
 Name: midway-hook
 Provider:
   - 阿里云
-Version: 0.0.3
+Version: 0.0.4
 Description: 阿里云Midway前后端一体化组件，帮助您快速一体化项目
 HomePage: https://github.com/devsapp/midway-hooks
 Tags:
