@@ -14,7 +14,7 @@
   "dependencies": {
     "@midwayjs/faas": "^2.8.6",
     "@midwayjs/hooks": "^2.0.0",
-    "@serverless-devs/core": "^0.0.60",
+    "@serverless-devs/core": "^0.0.*",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },

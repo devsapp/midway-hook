@@ -1,2 +1,2 @@
-declare const deployFaas: (baseDir: string, inputs: any) => Promise<void>;
-export default deployFaas;
+declare const deployReactHooks: (baseDir: string, inputs: any) => Promise<unknown>;
+export default deployReactHooks;

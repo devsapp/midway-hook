@@ -1,6 +1,7 @@
 'use strict';
 import { CommandCore } from '@midwayjs/command-core';
 import get from 'lodash.get';
+import { spawn } from 'child_process';
 import { PackagePlugin } from '@midwayjs/fcli-plugin-package';
 import { AliyunFCPlugin } from '@midwayjs/fcli-plugin-fc';
 import { DeployPlugin } from '@midwayjs/fcli-plugin-deploy';
@@ -30,4 +31,21 @@ const deployFaas = async (baseDir: string, inputs) => {
   await core.invoke(['deploy']);
 };
 
-export default deployFaas;
+const deployReactHooks = async (baseDir: string, inputs) => {
+  return new Promise((reslove, reject) => {
+    spawn('npx', ['tsc && npx vite build'], {
+      shell: true,
+      cwd: baseDir,
+      stdio: 'inherit',
+    })
+      .on('close', async () => {
+        await deployFaas(baseDir, inputs);
+        reslove('success');
+      })
+      .on('close', () => {
+        reject();
+      });
+  });
+};
+
+export default deployReactHooks;

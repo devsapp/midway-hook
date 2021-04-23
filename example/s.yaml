@@ -6,7 +6,7 @@ services:
     access: simple_mvc
     props:
       service:
-        name: dankun-midway-app
+        name: dankun-midway-app-1
       provider:
         name: aliyun
         runtime: nodejs12
