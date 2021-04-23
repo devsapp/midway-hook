@@ -42,7 +42,7 @@ const deployReactHooks = async (baseDir: string, inputs) => {
         await deployFaas(baseDir, inputs);
         reslove('success');
       })
-      .on('close', () => {
+      .on('error', () => {
         reject();
       });
   });
