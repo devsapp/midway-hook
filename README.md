@@ -37,7 +37,6 @@ props配置详细介绍参考 [midway-hook f.yml配置](https://www.yuque.com/mi
 ## 模板应用
 目前支持模板应用包括
 - react模板: `s init devsapp/midway-hook-react`
-- vue模板 `s init devsapp/midway-hook-vue`
 
 
 -----
